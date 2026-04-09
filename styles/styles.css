@@ -7,6 +7,8 @@ nav a {
     color: white;
     display: block;
     margin: 20;
+    padding: auto; 
+
 }
 
 h1 {
@@ -47,6 +49,18 @@ img {
 main img {
     width: 150px;
     height: auto;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: auto;
+    box-shadow:#333;
+}
+
+main p {
+    padding: 10px; 
 }
 
 p {
