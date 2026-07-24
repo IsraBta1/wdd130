@@ -1,12 +1,8 @@
 :root {
     --primary-color: #055a05;
-    /* forest green */
     --secondary-color: #f4a261;
-    /* warm sand */
     --accent1-color: #264653;
-    /* dark slate blue */
     --accent2-color: #e9c46a;
-    /* light golden yellow */
     --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -30,69 +26,36 @@ footer {
     margin: 0 auto;
 }
 
-h1,
-h2 {
-    font-family: var(--heading-font);
-    background-color: var(--primary-color);
-    color: white;
-}
-
-h2 {
-    width: auto;
-    margin: 16px 0;
-    padding: 16px;
-    opacity: 0.7;
-    background-color: var(--accent2-color);
-    color: white;
-}
-
-nav {
-    margin: 16px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 16px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.socialmedia {
-    text-decoration: none;
-}
-
 .hero {
     position: relative;
-    background-color: var(--accent1-color);
     overflow: hidden;
-    padding: 0;
+}
+
+.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 16px 24px;
+    background-color: rgba(38, 70, 83, 0.85);
+    color: white;
+    text-align: center;
 }
 
 .hero article {
-    position: relative;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: min(380px, calc(100% - 40px));
     padding: 16px;
-    overflow: auto;
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.hero img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .hero article img {
@@ -101,14 +64,22 @@ article {
     margin: 0 0 16px 16px;
 }
 
-h1 {
-    margin: 20px 0;
-    width: auto;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: blue;
+.socialmedia a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    background-color: var(--primary-color);
     color: white;
+}
+
+h2 {
+    margin: 16px 0;
+    padding: 16px;
+    opacity: 0.7;
+    background-color: var(--accent2-color);
 }
 
 img {
