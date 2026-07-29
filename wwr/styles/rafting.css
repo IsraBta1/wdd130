@@ -19,6 +19,39 @@ body {
     background-color: #f4f1e7;
 }
 
+/*Header*/
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--primary-color);
+    margin: 80px;
+    padding: 10px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 header,
 main,
 footer {
