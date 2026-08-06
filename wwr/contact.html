@@ -24,60 +24,63 @@
     </header>
     <main>
         <h1 style="color: black;">White Water Rafting</h1>
-        <div class="hero">
-            <p>White Water Rafting Company</p>
-            <p>123 Main River Street</p>
-            <p>Kolob, California</p>
-            <p>+1 999 999 9999</p>
-            <p>info@whitewater.com</p>
+        <div class="contact-layout" style="display: flex; align-items: flex-start; gap: 2rem;">
+            <div class="hero" style="flex: 1;">
+                <p>White Water Rafting Company</p>
+                <p>123 Main River Street</p>
+                <p>Kolob, California</p>
+                <p>+1 999 999 9999</p>
+                <p>info@whitewater.com</p>
+            </div>
+
+            <form action="#" method="post" style="flex: 1; max-width: 500px;">
+                <fieldset>
+                    <legend>Contact Form</legend>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Placeholder" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Placeholder"
+                          required>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Message Purpose</p>
+                        <label>
+                            <input type="radio" name="purpose" value="general" required>
+                            General Inquiry
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="reservation">
+                            Reservation Question
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="website">
+                            Website Suggestion
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Type here..."
+                          required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="subscribe">
+                            Please subscribe me to the monthly newsletter
+                        </label>
+                    </div>
+
+                    <button type="submit">Get in Touch!</button>
+                </fieldset>
+            </form>
         </div>
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Contact Form</legend>
-
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Placeholder" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Placeholder" required>
-                </div>
-
-                <div class="form-group">
-                    <p>Message Purpose</p>
-                    <label>
-                        <input type="radio" name="purpose" value="general" required>
-                        General Inquiry
-                    </label>
-                    <label>
-                        <input type="radio" name="purpose" value="reservation">
-                        Reservation Question
-                    </label>
-                    <label>
-                        <input type="radio" name="purpose" value="website">
-                        Website Suggestion
-                    </label>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Type here..."
-                      required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" name="subscribe">
-                        Please subscribe me to the monthly newsletter
-                    </label>
-                </div>
-
-                <button type="submit">Get in Touch!</button>
-            </fieldset>
-        </form>
-
 
         <section>
             <h2>Contact Us</h2>
