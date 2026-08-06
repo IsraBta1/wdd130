@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll-Form</title>
+    <link rel="stylesheet" href="styles/poll-form.css">
+</head>
+
+<body>
+
+</body>
+<header></header>
+<main>
+    <h1>WDD 130 | HTML Form - User Poll</h1>
+    <form action="">
+        <h2>Contact Information</h2>
+        <div class="contact">
+            <label for="fullname">Fullname:<input type="text" name="fullname" id="fullname"></label>
+            <br>
+            <label for="useremail">Email:<input type="email" name="useremail"
+                  id="useremail"></label>
+            <br>
+        </div>
+
+        <h2>Question</h2>
+        <div class="question">
+            <label for="quantity">What is your favorite browser?</label>
+            <select name="browser" id="browser">
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firebox</option>
+                <option value="edge">Edge</option>
+                <option value="brave">Brave</option>
+            </select>
+
+            <br>
+
+            <label for="pet">Do you have a household pet?</label>
+            <input type="checkbox" name="pet" id="pet">
+
+            <label for="feedback">List the places you have lived:</label>
+            <textarea name="feedback" id="feedback" rows="4"
+              placeholder="Stillwater, Amsterdam Netherlands, Timbuktu Mali"></textarea>
+        </div>
+        <button type="submit"> Submit </button>
+    </form>
+</main>
+<footer>
+    <p>2026 | HTML Form - User Poll Activity | Israel Betancourt</p>
+</footer>
+
+</html>
