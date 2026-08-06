@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact us.">
+    <meta name="description"
+      content="Contact us to book your next adventure with White Water Rafting, ask questions about our river trips, or request more information.">
     <meta name="author" content="Israel Betancourt">
-    <title>Contact</title>
+    <title>Contact Us | White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
@@ -23,9 +24,9 @@
         </nav>
     </header>
     <main>
-        <h1 style="color: black;">White Water Rafting</h1>
-        <div class="contact-layout" style="display: flex; align-items: flex-start; gap: 2rem;">
-            <div class="hero" style="flex: 1;">
+        <h1 class="page-title">White Water Rafting</h1>
+        <div class="contact-layout">
+            <div class="hero-contact">
                 <p>White Water Rafting Company</p>
                 <p>123 Main River Street</p>
                 <p>Kolob, California</p>
@@ -33,7 +34,7 @@
                 <p>info@whitewater.com</p>
             </div>
 
-            <form action="#" method="post" style="flex: 1; max-width: 500px;">
+            <form action="#" method="post" class="contact-form">
                 <fieldset>
                     <legend>Contact Form</legend>
 
@@ -50,16 +51,18 @@
 
                     <div class="form-group">
                         <p>Message Purpose</p>
-                        <label>
-                            <input type="radio" name="purpose" value="general" required>
+                        <label for="purpose-general">
+                            <input type="radio" id="purpose-general" name="purpose" value="general"
+                              required>
                             General Inquiry
                         </label>
-                        <label>
-                            <input type="radio" name="purpose" value="reservation">
+                        <label for="purpose-reservation">
+                            <input type="radio" id="purpose-reservation" name="purpose"
+                              value="reservation">
                             Reservation Question
                         </label>
-                        <label>
-                            <input type="radio" name="purpose" value="website">
+                        <label for="purpose-website">
+                            <input type="radio" id="purpose-website" name="purpose" value="website">
                             Website Suggestion
                         </label>
                     </div>
@@ -71,8 +74,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label>
-                            <input type="checkbox" name="subscribe">
+                        <label for="subscribe">
+                            <input type="checkbox" id="subscribe" name="subscribe">
                             Please subscribe me to the monthly newsletter
                         </label>
                     </div>
@@ -88,17 +91,17 @@
             <div class="cards-container">
                 <figure>
                     <img src="images/rocosa.jpg" alt="Rocosa">
-                    <figcaption>Rocky</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/calma.jpg" alt="Calm Down">
-                    <figcaption>Calm</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
 
                 <figure>
                     <img src="images/tormenta.jpg" alt="Storm">
-                    <figcaption>Storm</figcaption>
+                    <figcaption>Employee Profile</figcaption>
                 </figure>
             </div>
         </section>
