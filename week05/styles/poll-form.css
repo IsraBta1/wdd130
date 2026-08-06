@@ -1,7 +1,18 @@
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --text-color: #334155;
+    --label-color: #4a5568;
+    --bg-main: #ffffff;
+    --bg-input: #f8fafc;
+    --border-color: #cbd5e1;
+    --border-radius: 6px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
 
@@ -9,10 +20,10 @@
     max-width: 450px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: var(--bg-main);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
 }
 
 h2 {
@@ -21,44 +32,40 @@ h2 {
     color: #333333;
 }
 
-.contact,
 .question {
     margin-bottom: 1.25rem;
 }
 
-.contact,
-.question label {
+label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
     font-size: 0.9rem;
-    color: #4a5568;
-}
-
-label {
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #4a5568;
+    color: var(--label-color);
 }
 
 .contact input[type="text"],
 .contact input[type="email"],
-.question textarea {
+.question textarea,
+.question select {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    background-color: #f8fafc;
-    color: #334155;
+    font-family: inherit;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-input);
+    color: var(--text-color);
     transition: all 0.2s ease-in-out;
 }
 
-.question textarea:focus {
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.question textarea:focus,
+.question select:focus {
     outline: none;
-    border-color: #3b82f6;
-    background-color: #ffffff;
+    border-color: var(--primary-color);
+    background-color: var(--bg-main);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
@@ -67,14 +74,19 @@ button {
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: 600;
+    font-family: inherit;
     color: #ffffff;
-    background-color: #3b82f6;
+    background-color: var(--primary-color);
     border: none;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #2563eb;
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.99);
 }

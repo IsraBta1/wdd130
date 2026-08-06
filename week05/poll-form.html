@@ -5,49 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poll-Form</title>
-    <link rel="stylesheet" href="styles/poll-form.css">
+    <link rel="stylesheet" href="styles/poll-form2.css">
+</head>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 130 | HTML Form - User Poll</title>
+    <link rel="stylesheet" href="styles/poll-form2.css">
 </head>
 
 <body>
+    <header>
+        <h1>WDD 130 | HTML Form - User Poll</h1>
+    </header>
+    <main>
+        <form action="">
+            <fieldset>
+                <legend>Contact Information</legend>
 
+                <div class="form-item column2">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" name="fullname" id="fullname">
+                </div>
+
+                <div class="form-item column2">
+                    <label for="useremail">Email:</label>
+                    <input type="email" name="useremail" id="useremail">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Questions</legend>
+
+                <div class="form-item column1">
+                    <label for="browser">What is your favorite internet browser?</label>
+                    <select name="browser" id="browser">
+                        <option value="chrome">Chrome</option>
+                        <option value="firefox">Firefox</option>
+                        <option value="edge">Edge</option>
+                        <option value="brave">Brave</option>
+                    </select>
+                </div>
+
+                <div class="form-item column1">
+                    <label for="pet">Do you have a household pet?</label>
+                    <input type="checkbox" name="pet" id="pet">
+                </div>
+
+                <div class="form-item full-width">
+                    <label for="feedback" class="label-block">List the places you have
+                        lived:</label>
+                    <textarea name="feedback" id="feedback" rows="4"
+                      placeholder="Stillwater Florida, Amsterdam Netherlands, Timbuktu Mali"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit Poll</button>
+        </form>
+    </main>
+    <footer>
+        <p>2026 | HTML Form - User Poll Activity | Israel Betancourt</p>
+    </footer>
 </body>
-<header></header>
-<main>
-    <h1>WDD 130 | HTML Form - User Poll</h1>
-    <form action="">
-        <h2>Contact Information</h2>
-        <div class="contact">
-            <label for="fullname">Fullname:<input type="text" name="fullname" id="fullname"></label>
-            <br>
-            <label for="useremail">Email:<input type="email" name="useremail"
-                  id="useremail"></label>
-            <br>
-        </div>
-
-        <h2>Question</h2>
-        <div class="question">
-            <label for="quantity">What is your favorite browser?</label>
-            <select name="browser" id="browser">
-                <option value="chrome">Chrome</option>
-                <option value="firefox">Firebox</option>
-                <option value="edge">Edge</option>
-                <option value="brave">Brave</option>
-            </select>
-
-            <br>
-
-            <label for="pet">Do you have a household pet?</label>
-            <input type="checkbox" name="pet" id="pet">
-
-            <label for="feedback">List the places you have lived:</label>
-            <textarea name="feedback" id="feedback" rows="4"
-              placeholder="Stillwater, Amsterdam Netherlands, Timbuktu Mali"></textarea>
-        </div>
-        <button type="submit"> Submit </button>
-    </form>
-</main>
-<footer>
-    <p>2026 | HTML Form - User Poll Activity | Israel Betancourt</p>
-</footer>
 
 </html>
