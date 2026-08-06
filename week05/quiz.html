@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Evaluation Quiz: HTML and CSS </h1>
+            <p class="description">Answer the following questions to test your web development
+                knowledge.</p>
+        </header>
+
+        <form action="#" method="post">
+
+            <!-- User Information -->
+            <fieldset>
+                <legend>Student Information</legend>
+                <div class="user-info">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. Jane Doe"
+                          required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email"
+                          placeholder="student@example.com" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Question 1: Radio Buttons -->
+            <fieldset>
+                <legend>Question 1 (HTML)</legend>
+                <p class="question-text">Which HTML element is used to group controls and labels
+                    within a form?</p>
+                <div class="option-group">
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="div" required>
+                        <code>&lt;div&gt;</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="fieldset">
+                        <code>&lt;fieldset&gt;</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="section">
+                        <code>&lt;section&gt;</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q1" value="form">
+                        <code>&lt;form&gt;</code>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Question 2: Radio Buttons -->
+            <fieldset>
+                <legend>Question 2 (CSS)</legend>
+                <p class="question-text">Which CSS property creates space between the content of an
+                    element and its border?</p>
+                <div class="option-group">
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="margin" required>
+                        <code>margin</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="padding">
+                        <code>padding</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="border-spacing">
+                        <code>border-spacing</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="q2" value="gap">
+                        <code>gap</code>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Question 3: Checkboxes -->
+            <fieldset>
+                <legend>Question 3 (HTML)</legend>
+                <p class="question-text">Which of the following are block-level elements by default
+                    in HTML? (Select all that apply)</p>
+                <div class="option-group">
+                    <label class="option-label">
+                        <input type="checkbox" name="q3[]" value="div">
+                        <code>&lt;div&gt;</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="q3[]" value="span">
+                        <code>&lt;span&gt;</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="q3[]" value="p">
+                        <code>&lt;p&gt;</code>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="q3[]" value="a">
+                        <code>&lt;a&gt;</code>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Question 4: Select Dropdown -->
+            <fieldset>
+                <legend>Question 4 (HTML)</legend>
+                <div class="form-group">
+                    <label for="q4" class="question-text">Which HTML element is used to create a
+                        dropdown list of options?</label>
+                    <select id="q4" name="q4" required>
+                        <option value="" disabled selected>-- Select an option --</option>
+                        <option value="input">&lt;input type="dropdown"&gt;</option>
+                        <option value="select">&lt;select&gt;</option>
+                        <option value="list">&lt;list&gt;</option>
+                        <option value="datalist">&lt;datalist&gt;</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Question 5: Textarea -->
+            <fieldset>
+                <legend>Question 5 (CSS - Open Answer)</legend>
+                <div class="form-group">
+                    <label for="q5" class="question-text">Briefly explain the difference between
+                        <code>margin</code> and <code>padding</code> in the CSS box model:</label>
+                    <textarea id="q5" name="q5" rows="4" placeholder="Write your answer here..."
+                      required></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="btn-container">
+                <button type="submit">Submit Quiz</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
