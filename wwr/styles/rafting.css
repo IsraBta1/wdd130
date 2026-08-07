@@ -19,7 +19,13 @@ body {
     background-color: #f4f1e7;
 }
 
-/*Header*/
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
 
 header {
     display: grid;
@@ -35,9 +41,7 @@ header nav {
     justify-content: flex-end;
     align-items: center;
     background-color: var(--primary-color);
-    margin: 100px;
-    padding: 10px;
-    width: 415px;
+    padding: 0.75rem 1rem;
     border-radius: 6px;
 }
 
@@ -45,59 +49,66 @@ header nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
 }
 
-header nav ul li a {
+header nav a {
     text-decoration: none;
     color: #fff;
 }
 
-header,
-main,
-footer {
-    width: 100%;
-    max-width: 840px;
-    margin: 0 auto;
-}
-
 .hero {
-    display: grid;
-    grid-template-columns: 1.2fr minmax(280px, 1fr);
-    gap: 2rem;
-    align-items: center;
-    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero > img {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 28px;
     object-fit: cover;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
 }
 
 .hero h1 {
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    line-height: 1.03;
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
-    color: var(--primary-color);
+    padding: 1rem 1.5rem;
+    background-color: rgba(38, 70, 83, 0.85);
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    text-align: center;
+    z-index: 3;
 }
 
 .hero article {
-    max-width: 580px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: min(420px, calc(100% - 3rem));
+    padding: 1.25rem;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+    z-index: 2;
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    margin: 0 0 1rem 1rem;
+    border-radius: 12px;
+    max-width: 100%;
 }
 
 .hero article h1 {
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
-    line-height: 1.03;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
     margin: 0;
-    color: var(--primary-color);
+    color: white;
 }
 
 .hero article p {
@@ -275,12 +286,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid rgb(0 0 0 / 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 footer a {
-    margin-top: 5px;
-    margin-left: 5px;
+    margin: 5px 0 0 5px;
 }
 
 footer a img {
@@ -360,7 +370,6 @@ footer a img {
 
 .trips-table {
     width: 100%;
-    max-width: 100%;
     border-collapse: collapse;
     background-color: #fff;
     border: 2px solid rgba(5, 90, 5, 0.2);
@@ -448,23 +457,18 @@ footer a img {
 
 .preview-trips h2 {
     margin-bottom: 1.2rem;
-    color: white;
+    color: #fff;
 }
 
 @media (max-width: 900px) {
-    .trips-layout {
-        grid-template-columns: 1fr;
-    }
 
+    .trips-layout,
     .trips-grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 980px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
 
     .feature-cards,
     .trips-grid {
