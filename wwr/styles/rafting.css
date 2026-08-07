@@ -64,42 +64,46 @@ footer {
 }
 
 .hero {
-    position: relative;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.2fr minmax(280px, 1fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 0;
 }
 
 .hero > img {
-    display: block;
     width: 100%;
     height: auto;
+    border-radius: 28px;
+    object-fit: cover;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
 }
 
 .hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.03;
     margin: 0;
-    padding: 16px 24px;
-    background-color: var(--accent1-color);
-    color: white;
-    text-align: center;
+    color: var(--primary-color);
 }
 
 .hero article {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: min(380px, calc(100% - 40px));
-    padding: 16px;
-    background-color: rgba(255, 255, 255, 0.92);
-    border-left: 4px solid var(--accent2-color);
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin: 0 0 16px 16px;
+.hero article h1 {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.03;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.hero article p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
 }
 
 h1,
@@ -295,11 +299,12 @@ footer a img {
 
 .trips-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
 .trip-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: #fff;
     border: 2px solid rgba(5, 90, 5, 0.15);
     border-radius: 18px;
@@ -311,11 +316,13 @@ footer a img {
     padding: 0.8rem;
 }
 
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.12);
+}
+
 .trip-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
+    border-radius: 18px;
 }
 
 .trip-title {
@@ -388,11 +395,78 @@ footer a img {
     border-bottom: none;
 }
 
+.button-primary {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.95rem 1.8rem;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 18px rgba(5, 90, 5, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button-primary:hover {
+    transform: translateY(-2px);
+    background-color: var(--accent1-color);
+    box-shadow: 0 18px 28px rgba(5, 90, 5, 0.24);
+}
+
+.features {
+    padding: 2rem 0;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-cards article {
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid rgba(5, 90, 5, 0.15);
+    border-radius: 20px;
+    padding: 1.6rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-cards article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-cards h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.preview-trips {
+    padding: 2rem 0 0;
+}
+
+.preview-trips h2 {
+    margin-bottom: 1.2rem;
+    color: white;
+}
+
 @media (max-width: 900px) {
     .trips-layout {
         grid-template-columns: 1fr;
     }
 
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 980px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-cards,
     .trips-grid {
         grid-template-columns: 1fr;
     }
